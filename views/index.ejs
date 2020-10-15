@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Text-SMS</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Text-2-SMS</h2>
+        <% if(message.length > 0){ %>
+        <div class="flashmessages">
+            <%= message %>
+        </div>
+        <% } %>
+        <form action="/" method="POST">
+            <div class="formdiv">
+                <input type="text" placeholder="name" name="name" required>
+                <input name="telephone" type="tel" placeholder="telephone" required>
+                <textarea maxlength="100" rows="4" cols="30" name="text" type="text" placeholder="text msg"
+                    required></textarea>
+                <button class="submit">Send</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
